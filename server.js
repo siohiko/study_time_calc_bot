@@ -41,10 +41,11 @@ client.on('message', message =>{
    return;
  }
  if(message.isMemberMentioned(client.user)){
-   sendReply(message, "呼びましたか？");
+   sendReply(message, "今起きたンゴ！！");
    return;
  }
  if (message.content.match(/にゃ～ん|にゃーん/)){
+   console.log(message)
    let text = "にゃ～ん";
    sendMsg(message.channel.id, text);
    return;
