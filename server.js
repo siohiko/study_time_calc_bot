@@ -116,8 +116,14 @@ async function calcStudyTime(ch, target_user_id) {
   
   let diff = finish_time[0] - start_time[0];
   let h = diff / (1000 * 60 * 60);
-  let m =  diff / (1000 * 60 );
-  let stury_time = Math.floor(h)  + "時間" + Math.floor(m) + "分";
+  let inth = Math.floor(h);
+  
+  let m = diff / (1000 * 60);
+  let intm = Math.floor(m);
+  intm = intm - ( inth * 60 );
+
+  let stury_time = inth  + "時間" + intm + "分";
   
   return stury_time;
 }
+
